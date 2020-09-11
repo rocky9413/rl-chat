@@ -1,0 +1,12 @@
+version: '3'
+services:
+  bash: docker-compose bash
+  image: awsdocker13rl/mm-dev
+  container_name: mm-dev
+  ports:
+    - '8080:8080'
+  volumes:
+    - .:/usr/src/app
+    - node_modules:/usr/src/app/node_modules
+volumes:
+  node_modules:
